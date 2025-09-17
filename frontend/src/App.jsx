@@ -12,7 +12,7 @@ export default function App() {
 
   const handleLogin = async (email, password) => {
     try {
-      const res = await fetch("http://localhost:3000/users/login", {
+      const res = await fetch("https://bd39183c5bcc.ngrok-free.app/users/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

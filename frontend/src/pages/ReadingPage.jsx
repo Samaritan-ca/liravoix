@@ -7,7 +7,7 @@ export default function ReadingPage() {
 
   useEffect(() => {
     //const token = localStorage.getItem("token");
-    fetch("http://localhost:3000/books")
+    fetch("https://bd39183c5bcc.ngrok-free.app/books")
       .then((res) => res.json())
       .then((data) => setBooks(data.data || []))
       .catch((err) => console.error(err));
