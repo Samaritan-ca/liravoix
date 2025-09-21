@@ -7,7 +7,7 @@ export default function ReadingPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://bd39183c5bcc.ngrok-free.app/books", {
+    fetch("https://liravoix.onrender.com/books", {
       headers: { "ngrok-skip-browser-warning": "true" },
     })
       .then((res) => res.json())

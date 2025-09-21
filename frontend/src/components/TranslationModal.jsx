@@ -1,30 +1,3 @@
-/*import { layout } from "../styles/commonStyles";
-
-export default function TranslationModal({ word, translation, onClose }) {
-  if (!word) return null;
-
-  return (
-    <div style={{
-      position: "fixed",
-      bottom: "20px",
-      right: "20px",
-      background: "#fff",
-      border: "1px solid #e5e7eb",
-      borderRadius: "12px",
-      padding: "1.5rem",
-      boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-      zIndex: 1000,
-      width: "280px",
-    }}>
-      <strong style={{ fontSize: "1.1rem" }}>{word}</strong>: {translation || "Loading..."}
-      <div style={{ textAlign: "right", marginTop: "1rem" }}>
-        <button style={{ ...layout.button, padding: "0.5rem 1rem" }} onClick={onClose}>Close</button>
-      </div>
-    </div>
-  );
-}
-*/
-
 import { useState } from "react";
 import { layout } from "../styles/commonStyles";
 import AuthModal from "./AuthModal";
@@ -45,7 +18,7 @@ export default function TranslationModal({ word, translation, onClose }) {
 
     try {
       setLoading(true);
-      const res = await fetch("https://bd39183c5bcc.ngrok-free.app/words/add", {
+      const res = await fetch("https://liravoix.onrender.com/words/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
