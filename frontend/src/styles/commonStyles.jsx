@@ -1,4 +1,4 @@
-export const layout = {
+/*export const layout = {
   page: {
     padding: "2rem",
     fontFamily: "Arial, sans-serif",
@@ -23,5 +23,143 @@ export const layout = {
     border: "1px solid #ddd",
     borderRadius: "6px",
     background: "#fafafa",
+  },
+};*/
+
+// src/styles/commonStyles.js
+/*export const layout = {
+  page: {
+    padding: "2rem",
+    fontFamily: "'Inter', sans-serif",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    background: "#f9fafb",
+  },
+  heading: {
+    fontSize: "2.5rem",
+    fontWeight: 700,
+    marginBottom: "2rem",
+    color: "#111827",
+  },
+  button: {
+    padding: "0.75rem 1.5rem",
+    background: "#3b82f6",
+    color: "#fff",
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer",
+    fontWeight: 500,
+    transition: "background 0.2s",
+  },
+  card: {
+    padding: "1.5rem",
+    marginBottom: "1.5rem",
+    border: "1px solid #e5e7eb",
+    borderRadius: "12px",
+    background: "#fff",
+    boxShadow: "0 4px 6px rgba(0,0,0,0.05)",
+    transition: "transform 0.2s",
+  },
+  bookText: {
+    fontFamily: "'Merriweather', serif",
+    lineHeight: "1.8",
+    fontSize: "1.1rem",
+    textAlign: "justify",
+    whiteSpace: "pre-line",
+    textIndent: "2em",
+    color: "#374151",
+    margin: "0 auto",
+    maxWidth: "800px",
+  },
+  nav: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "1rem 2rem",
+    background: "#fff",
+    boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+    position: "sticky",
+    top: 0,
+    zIndex: 100,
+  },
+  link: {
+    marginRight: "1.5rem",
+    textDecoration: "none",
+    color: "#4b5563",
+    fontWeight: 500,
+    transition: "color 0.2s",
+  },
+};
+*/
+
+export const layout = {
+  page: {
+    padding: "2rem",
+    fontFamily: "'Inter', sans-serif",
+    maxWidth: "1000px",
+    margin: "0 auto",
+    background: "#f3f4f6",
+    minHeight: "100vh",
+  },
+  heading: {
+    fontSize: "2rem",
+    fontWeight: 700,
+    marginBottom: "1.5rem",
+    color: "#1f2937",
+    textAlign: "center",
+  },
+  button: {
+    padding: "0.75rem 1.5rem",
+    background: "#2563eb",
+    color: "#fff",
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer",
+    fontWeight: 500,
+    transition: "all 0.2s",
+  },
+  card: {
+    padding: "2rem",
+    margin: "0 auto",
+    border: "1px solid #e5e7eb",
+    borderRadius: "12px",
+    background: "#fff",
+    boxShadow: "0 6px 12px rgba(0,0,0,0.05)",
+    transition: "transform 0.2s",
+  },
+  bookText: {
+    fontFamily: "'Merriweather', serif",
+    fontSize: "1.1rem",
+    lineHeight: "1.8",
+    color: "#374151",
+  },
+  paragraph: {
+    marginBottom: "1.2rem",
+    textAlign: "justify",
+    textIndent: "2em",
+  },
+  word: {
+    cursor: "pointer",
+    padding: "0 2px",
+    borderRadius: "4px",
+    transition: "background 0.2s, color 0.2s",
+  },
+    nav: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "1rem 2rem",
+    background: "#fff",
+    boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+    position: "sticky",
+    top: 0,
+    zIndex: 100,
+  },
+  link: {
+    marginRight: "1.5rem",
+    textDecoration: "none",
+    color: "#4b5563",
+    fontWeight: 500,
+    transition: "color 0.2s",
   },
 };

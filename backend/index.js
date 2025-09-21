@@ -13,9 +13,11 @@ app.use(cors({
 // Routes
 const userRoutes = require('./routes/userRoutes');
 const bookRoutes = require('./routes/bookRoutes');
+const wordRoutes = require('./routes/wordRoutes');
 
 app.use('/users', userRoutes);
 app.use('/books', bookRoutes);
+app.use('/words', wordRoutes);
 
 app.get('/health', (req, res) => {
   res.status(200).send('OK');

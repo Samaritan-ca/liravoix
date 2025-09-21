@@ -24,21 +24,40 @@ exports.userLogin = async (req, res) => {
 };
 
 exports.userSignup = async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, name } = req.body;
 
-  const { data, error } = await supabase
-    .from('users')
-    .select('id, password')
-    .eq('email', email)
-    .single();
+  try {
+    // basic validation
+    if (!email || !password) {
+      return res.status(400).json({ error: "Email and password are required" });
+    }
 
-  if (error || !data) return res.status(401).json({ error: 'No username found' });
+    // check if user already exists
+    const { data: existingUser, error: checkError } = await supabase
+      .from("users")
+      .select("id")
+      .eq("email", email)
+      .single();
 
-  if( password !== data.password ) {
-    return res.status(401).json({ error: 'Password is incorrect' });
+    if (existingUser) {
+      return res.status(400).json({ error: "User already exists" });
+    }
+
+    // insert new user
+    const { data: newUser, error: insertError } = await supabase
+      .from("users")
+      .insert([{ email, password, name }])
+      .select("id")
+      .single();
+
+    if (insertError) throw insertError;
+
+    // generate JWT
+    const token = jwt.sign({ user_id: newUser.id }, JWT_SECRET, { expiresIn: "777777d" });
+
+    res.json({ token });
+  } catch (err) {
+    console.error("Error in userSignup:", err.message);
+    res.status(500).json({ error: "Failed to sign up" });
   }
-
-  const token = jwt.sign({ user_id: data.id }, JWT_SECRET, { expiresIn: '777777d' });
-  res.json({ token });
 };
-
