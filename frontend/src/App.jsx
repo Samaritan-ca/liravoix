@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import HomePage from "./pages/HomePage";
 import ReadingPage from "./pages/ReadingPage";
 import GrammarPage from "./pages/GrammarPage";
+import VocabularyPage from "./pages/VocabularyPage";
 import BookPage from "./pages/BookPage";
 import AccountPage from "./pages/AccountPage";
 import Navbar from "./components/Navbar";
@@ -69,6 +70,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/reading" element={<ReadingPage />} />
         <Route path="/grammar" element={<GrammarPage />} />
+        <Route path="/vocabulary" element={<VocabularyPage />} />
         <Route path="/books/:id/:page" element={<BookPage />} />
         <Route path="/account" element={<AccountPage />} />
       </Routes>
